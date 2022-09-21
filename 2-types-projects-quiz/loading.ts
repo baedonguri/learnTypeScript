@@ -19,6 +19,21 @@
   };
 
   type ResourceLoadState = LoadingState | SuccessState | FailState;
+  function printLoginState(state: ResourceLoadState) {
+    switch(state.state){
+      case "loading":
+        console.log(`👀 ${state.state}...`);
+        break;
+      case "success":
+        console.log(`😃 ${state.response.body}`);
+        break;
+      case "fail":
+        console.log(`😱 ${state.reason}`);
+        break;
+      default:
+        throw new Error("unknown command!");
+    }
+  }
 
   printLoginState({ state: 'loading' }); // 👀 loading...
   printLoginState({ state: 'success', response: { body: 'loaded' } }); // 😃 loaded

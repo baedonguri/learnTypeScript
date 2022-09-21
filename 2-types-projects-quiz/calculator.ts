@@ -22,6 +22,6 @@ function calculate(command: Mode, x: number, y: number): number {
     case "remainder":
       return x % y;
     default:
-      throw Error("unknown Command");
+      throw new Error("unknown Command");
   }
 }
