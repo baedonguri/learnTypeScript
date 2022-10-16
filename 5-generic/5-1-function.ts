@@ -1,6 +1,9 @@
 {
   /**
-   * Generic을 사용하면 컴파일 시간에 타입을 보장받을 수 있는 장점이 있다.
+   * Generic을 사용하면 좋은 점
+   * - 컴파일 타임에 타입을 보장 받을 수 있다.
+   * - 들어오는 타입에 대해 유연하게 대처할 수 있다.
+   * - 재사용성을 높일 수 있다.
    */
   function checkNotNullAnyBad(arg: any | null): any {
     if (arg == null) {

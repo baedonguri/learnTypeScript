@@ -53,5 +53,5 @@
 
   console.log(getValue(obj, "name")); // aiden
   console.log(getValue(obj, "age")); // 20
-  console.log(getValue(obj2, "animal"));
+  console.log(getValue(obj2, "animal")); // dog
 }
