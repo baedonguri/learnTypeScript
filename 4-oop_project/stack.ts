@@ -13,7 +13,7 @@ type StackNode = {
   readonly next?: StackNode;
 };
 
-class StackImpl implements Stack {
+export class StackImpl implements Stack {
   private _size: number = 0;
   private head?: StackNode;
 
