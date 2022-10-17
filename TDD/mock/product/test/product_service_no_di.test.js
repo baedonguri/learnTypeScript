@@ -25,4 +25,9 @@ describe("ProductService", () => {
     expect(items.length).toBe(1);
     expect(items).toEqual([{ item: "Milk", available: true }]);
   });
+
+  it("test", async () => {
+    const items = await productService.fetchAvailableItems();
+    expect(fetchItems).toHaveBeenCalledTimes(1);
+  });
 });
