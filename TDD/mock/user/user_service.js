@@ -1,16 +1,14 @@
 class UserService {
-  constructor(userClient) {
-    this.userClient = userClient;
+  constructor(UserClient) {
+    this.UserClient = UserClient;
     this.isLogedIn = false;
   }
 
   login(id, password) {
     if (!this.isLogedIn) {
-      //return fetch('http://example.com/login/id+password') //
-      // .then((response) => response.json());
-      return this.userClient
-        .login(id, password) //
-        .then((data) => (this.isLogedIn = true));
+      return this.UserClient.login(id, password).then(
+        (data) => (this.isLogedIn = true)
+      );
     }
   }
 }
